@@ -1,0 +1,9 @@
+.next
+public
+
+/**/*.d.ts
+
+next.config.js
+
+# npm
+/node_modules

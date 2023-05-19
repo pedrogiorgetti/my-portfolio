@@ -1,0 +1,146 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "next"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 13,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "prettier",
+    "eslint-plugin-import-helpers",
+    "sort-destructure-keys",
+    "typescript-sort-keys"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any" : "off",
+    "react/jsx-no-useless-fragment": "off",
+    "no-await-in-loop": "off",
+    "no-shadow": "off",
+    "camelcase": "off",
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-anonymous-default-export": ["off"],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": false,
+        "shorthandFirst": false,
+        "shorthandLast": false,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": false
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
+    "no-underscore-dangle": [
+      "off",
+      {
+        "allow": ["_httpClientError", "_appError"]
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react$/"],
+          ["/react$/"],
+          ["/next$/"],
+          "/^react/",
+          "/^next/",
+          "module",
+          "/^hooks/",
+          "/^components/",
+          "/^pages/",
+          "/^services/",
+          "/^utils/",
+          "/^assets/",
+          "/^store/",
+          "/^styles/"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "sort-destructure-keys/sort-destructure-keys": [
+      2,
+      {
+        "caseSensitive": false
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      } 
+    ],
+    "no-param-reassign": [ "warn", 
+      { 
+        "props": true,
+        "ignorePropertyModificationsForRegex": ["^draft", "^httpClient"] 
+      }
+    ],
+    "react/require-default-props": [0],
+    "react/display-name": [0],
+    "prefer-destructuring": ["off"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".ts", ".d.ts", ".tsx"],
+        "moduleDirectory": ["src", "node_modules"],
+        "caseSensitive": false
+      }
+    },
+    "next": {
+      "rootDir": "./"
+    }
+  }
+} 
